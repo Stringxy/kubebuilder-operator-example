@@ -1,0 +1,14 @@
+apiVersion: xytest.xy.io/v1
+kind: XyDaemonset
+metadata:
+  labels:
+    app.kubernetes.io/name: data
+    app.kubernetes.io/managed-by: kustomize
+  name: xydaemonset-busybox
+  namespace: xytest
+spec:
+  command: ["sleep", "3600"]
+  image: busybox
+  replicas: 1
+
+
